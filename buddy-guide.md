@@ -31,7 +31,7 @@ someone, we will leave that in your expert hands, it is designed to ensure the s
 * Find out a little about them personally, you are going to work closely over the next month
 * Share with them your email, Slack and IRC handles, ensure the communication lines are always open
 * Add them to the rh-students Slack channel for peer support
-* Ask your new student to provide you with their GitHub account to add them to relevant GitHub organisations (fheng, feedhenry & feedhenry-templates in particular)
+* Assist them with setting up a GitHub account, and add them to any relevant organisations if appropriate
 * Show them the new student section in `feedhenry/student-help-guide`
 * Help them navigate around Gmail, recommend that they setup some filters especially for our github projects
 
@@ -39,7 +39,7 @@ someone, we will leave that in your expert hands, it is designed to ensure the s
 
 * Introduce the buddy to the wider team, be it through IRC, Slack, Email, Bluejeans or all of the above
 * If it is an on site student, walk them around and introduce them to the wider Red Hat community
-* Make them aware of the variety of [mailing lists](http://post-office.corp.redhat.com/mailman/listinfo) within Red Hat and encourage them to sign up to lists of interest
+* Make them aware of the various FeedHenry and open-source channels and lists
 
 
 
