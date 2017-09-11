@@ -15,9 +15,9 @@ If you have some content that you think would be useful we would love to include
 
 The format of the guide is as follows:
 
-Top level index.html contains links to programmes.
-Programmes contain topics
-Topics contain talks/labs which can come in a pdf format (i.e. a document or a presentation).
+* Top level index.html contains links to programmes.
+* Programmes contain topics
+* Topics contain talks/labs which can come in a pdf format (i.e. a document or a presentation).
 
 Decide how you can fit your content into this layout. Simples! :D
 
