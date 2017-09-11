@@ -17,9 +17,11 @@ The format of the guide is as follows:
 
 Top level index.html contains links to programmes.
 Programmes contain topics
-Topics contain talks.
+Topics contain talks/labs which can come in a pdf format (i.e. a document or a presentation).
 
 Decide how you can fit your content into this layout. Simples! :D
+
+See the image below for how these fit together and are linked between. Note: it is not required that your content has four topics and four talks/labs. This is only for illustrative purposes on how a page is laid out.
 
 ![Image of Layout](/images/layout.png)
 
