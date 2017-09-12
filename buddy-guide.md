@@ -1,26 +1,21 @@
 **Table of Contents**
 
-- [Buddy Guide](#buddy-guide)
-- [Before the new student starts](#before-the-new-student-starts)
-- [Day 1](#day-1)
-- [Week 1](#week-1)
-- [End of Week 1](#end-of-week-1)
+- [What is a buddy?](#what-is-a-buddy)
+- [What is expected of you as a buddy](#what-is-expected-of-you-as-a-buddy)
+- [What is expected of you as a student](#what-is-expected-of-you-as-a-buddy)
 
-# Buddy Guide
-As part of Red Hat's internship programme, each new hire will be allocated a buddy. A buddy is an experienced team member who will be able to provide training, instruction and leadership for the student. This is a guide for what is expected of you as a buddy to ensure that the student have a pleasant experience during their internship.
+# What is a buddy?
+As part of Red Hat's internship programme, each student will be allocated a buddy. A buddy is an experienced team member who will be able to provide training, instruction and leadership for the student. The student-buddy system is a two-way relationship. It is up to the buddy and the student how that relationship is built. This is only a guideline which specifies what is expected of you as a buddy or as a student to ensure that both individuals will have a smooth and pleasant experience during the duration of the internship. 
 
+# What is expected of you as a buddy
+- Be friendly and welcoming
+- Get to know the student you're partnered up with
+- Be ready to answer queries that the student may have and encourage the student to ask questions
+- Provide constructive feedback
+- Maintain constant communication
+- Knowledge share
 
-# Before the new student starts
-- Ensure you are familiar with the student you are paired up with. Read their CV, learn something about them. 
-- Ensure that any materials that the student needs are available and ready (i.e. laptop, account details, access badge, etc.)
-- Ensure that you are familiar with the [internship programme schedule](https://github.com/feedhenry/student-help-guide/blob/master/programme-schedule.md)
-
-
-# Day 1
-
-
-# Week 1
-
-
-# End of Week 1
-
+# What is expected of you as a student
+- Get to know your buddy
+- Don't hesitate to ask any questions and approach your buddy for help
+- Be open! Don't hesitate to contribute or share any ideas, feedback or knowledge that you have with your buddy
