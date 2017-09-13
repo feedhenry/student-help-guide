@@ -56,124 +56,225 @@ figcaption
   <body>
     
 
+<style>
   
-  <header class="ui center aligned middle aligned stackable grid segment">
 
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+      Git Workshop - Part 1
+    </a>
+  </header>
+  <div class="right tab-menu menu">
     
-      
-  <a class="ui blue left corner label">
-    <div id="showTOC" class="popup" data-content="Reveal TOC">
-      <i id="toc" class="sitemap big  icon"></i>
-    </div>
-  </a>
-
+    <a class="item" data-tab="Lab-01-Terminal and Commands">
+      Lab-01-Terminal and Commands
+    </a>
     
-
-    <div class="ui five wide column">
-      <h2> Git Workshop - Part I </h2>
-    </div>
-
-    <div class="ui two wide column">
+    <a class="item" data-tab="01">
+      01
+    </a>
+    
+    <a class="item" data-tab="02">
+      02
+    </a>
+    
+    <a class="item" data-tab="03">
+      03
+    </a>
+    
+   
+    <div class="item">
       
-          
-  <div class="two wide column sitemap">
-    <div class="popup" data-content="To the top level Topics for this Module...">
-      <a href="../index.html"> <i class="huge home icon"></i> <br> Module Home </a>
     </div>
   </div>
+</div>
 
-        
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Lab-01-Branching and Merging">
+        <h1>Objectives</h1>
+          <ol>
+            <li>Understand what A Terminal is</li>
+            <li>Understand Basic Terminal Commands</li>
+          </ol>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="01">
+        <h1>Topics</h1>
+<p>In this workshop, we&#39;ll cover the following:</p>
+<h2>Terminal</h2>
+<p>Basi Terminal Commands</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="02">
+        <h1>Terminal</h1>
+<h2>What is a terminal?</h2>
+<p>The terminal is an interface in which you can type and execute text based commands.</p>
+
+<p float="left"><img src="img/terminal.png" alt="A Terminal View"></p>
+
+<p>Another way of describing an interface is how something is interacted with</p>
+<p>Some examples are<p>
+<ul>
+<li>A Steering wheel in a car</li>
+<li>A Control on a Games Console</li>
+<li>A Keyboard on a computer</li>
+<li>GUI - Graphical User Interface</li>
+</ul>
+
+<p>Can you think of any other examples?</p>
+
+<h2>Alternative Names for Terminal</h2>
+  <ul>
+    <li>Console</li>
+    <li>Command Line</li>
+    <li>Command Prompt</li>
+    <li>Shell</li>
+  </ul>
+
+<h2>How to get access to your terminal</h2>
+
+<p> This depends on the operating system you are using</p>
+<ul>
+<li>On Mac - use the SearchLight Function</li>
+<li>On Linux - use the Search Program Function</li>
+</ul>
+
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="03">
+        <h1>Terminal Commands</h1>
+        <h2>How to navigate around folders in the terminal</h2>
+        <p>You will see &lt;username&gt;@&lt;computer&gt; foldername  .This is your folder path.</p>
+        <p>This tells you what folder you are in.</p>
+        <p>To see what is the folder type ‘ls -al’ and hit enter. (see the image below for an example)</p>
+
+
+<p float="left"><img src="img/folder.png" alt="A Folder View"></p>
+
+<p>
+This will show you a list of all files and folders inside the folder you are currently in. To move to a different folder inside the folder you are currently in type: cd &lt;folder&lt; (see the image below for an example. cd=Change Directory
+</p>
+
+<p float="left"><img src="img/sample.png" alt="Change Folder"></p>
+
+
+<p>Using these you commands you should be able to get to the folder where your My-First-Website files are stored. This is where we want to initialise (create) our local git repository (project).</p>
+
+<p>NOTE: If you go into a folder that you want to get out of type ‘cd ..’ and hit enter. This brings you back up one folder.</p>
+
+<p>In the terminal . indicates the current folder and .. indicates the outer folder.</p>  
+
+<p>NOTE: You can use tab to complete folder names. E.g type ‘cd sam’ If you hit tab at this point and there is a folder that matches like the sample folder, the terminal will complete it for you.</p>
+
+
+      </div>
+
+
     </div>
 
-    <div class="ui five wide column">
-      
-  <div class="four wide column">
-    <div class="ui center aligned mini message segment">
-      Redhat Mobile, Waterford.
+  </div>
+
+</div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
       <a href="http://creativecommons.org/licenses/by-nc/4.0/"
          title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
          target="_blank">Creative Commons License
       </a>
     </div>
   </div>
+</div>-->
 
-    </div>
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
 
-    <div class="three wide column">
-      
-    </div>
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
 
+</script>
 
-  </header>
-  
-  
-   <div class="ui segment pushable">
-    <div class="ui inverted labeled icon left inline vertical sidebar menu">
-      <div class="header">
-        <a class="item" href="#">
-          
-        </a>
-      </div>
-      <div class="menu">
-        
-          <a class="item" href="talk-1-git/git.pdf">
-            Git
-          </a>
-        
-          <a class="item" href="book-b-branching-and-merging/index.html">
-            Lab-01-Branching and Merging
-          </a>
-        
-      </div>
-    </div>
-    <div class="pusher">
-      <div class="ui basic container segment">
-       
-         
-  
-
-         
-         
-  
-    <section class="ui attached segment">
-      <a class="ui right ribbon label">talks</a>
-      <div class="ui centered four doubling stackable cards">
-  
-     <a class="ui raised link card" href="talk-1-git/git.pdf" target="_blank">
-  
-
-      <div class="center aligned content">
-        <div class="right floated meta"><i class="huge object group icon"></i></div>
-        <div class="header"> Git</div>
-      </div>
-
-      <div class="image">
-        <img class="ui bordered rounded image" src="talk-1-git/git.png">
-      </div>
-
-      <div class="center aligned content">
-        <div class="description">
-          <p>A visual introduction</p>
-
-        </div>
-      </div>
-
-      
-
-    </a>
-
-
-          
-        
-      </div>
-    </section>
-         
-  
-
-         
-      </div>
-    </div>
-  </div>
 
 
     <footer>
