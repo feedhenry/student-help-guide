@@ -1,0 +1,291 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Schedule
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Schedule">
+      Schedule
+    </a>
+    
+    <a class="item" data-tab="September">
+      September
+    </a>
+    
+    <a class="item" data-tab="October">
+      October
+    </a>
+    
+    <a class="item" data-tab="November">
+      November
+    </a>
+    
+    <a class="item" data-tab="December">
+      December
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="active item" href="../../topic02-schedule/book-schedule/index.html">
+          Schedule
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-git-introduction/book-git-intro/index.html">
+          Git-Labs
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Schedule">
+        <h1>Overview</h1>
+<p>A weekly schedule of the internship program that is updated every week.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="September">
+        <h1>Schedule for September</h1>
+<h2>Week 1: Induction</h2>
+<p><strong>9.00 - 9.30</strong> - Meet your buddy and have a cup of tea<br><strong>9.30 - 10.00</strong> - Site walk around<br><strong>10.00 - 11.00</strong> - Presentation and walk-through of the goals of the placement and the rules enforced. (Homework, coding club, diary, Coder Dojo, etc.)<br><strong>11.00 - 12.30</strong> - Shadow your buddy and setup laptop and tools<br><strong>12.30 - 1.30</strong> - Lunch<br><strong>1.30 - 4.00</strong> - Presentation on Agile, Trello, Git and how we work<br><strong>4.00 - 4.30</strong> - First Day Recap</p>
+<h2>Week 2: Agile &amp; Requirements</h2>
+<p><strong>9.00 - 9.30</strong> - Sign in and catch up with buddy<br><strong>9.30 - 10.30</strong> - Recap session from last week (Git, Github, Slack, blog)<br><strong>10.30 - 11.30</strong> - Shadow buddy<br><strong>11.30 - 12.30</strong> - Team building exercise<br><strong>12.30 - 1.30</strong> - Lunch<br><strong>1.30 - 4.00</strong> - Session on Agile, wireframes and planning for a website<br><strong>4.00 - 4.45</strong> - Add to your work experience journal<br><strong>4.45 - 5.30</strong> - Recap on the day with buddies. Questions about homework  </p>
+<h2>Week 3: Planning (continuation) &amp; Intro to JavaScript</h2>
+<p><strong>9.00 - 9.15</strong> - Sign in and catch up with buddy<br><strong>9.15 - 10.00</strong> - Stand-up and recap<br><strong>10.00 - 11.00</strong> -  Shadow buddy<br><strong>11.00 - 11.15</strong> - Break<br><strong>11.15 - 12.30</strong> - Team building exercise<br><strong>12.30 - 1.30</strong> - Lunch<br><strong>1.30 - 2.15</strong> - Overview of the process of story-pointing stories<br><strong>2.15 - 2.30</strong> - Break<br><strong>2.30 - 3.00</strong> - Stand-up with the SDK team<br><strong>3.00 - 4.45</strong> - Introduction to Javascript<br><strong>4.45 - 5.00</strong> - Recap  </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="October">
+        <h1>Schedule for October</h1>
+<h2>Week 4: Introduction to HTML</h2>
+<p><strong>9:00 - 9.15</strong> - Sign in and catch up with buddy (Canteen)<br><strong>9:15 - 10:15</strong> - Stand-up and Retrospective (Sailboat)<br><strong>10:15 - 11:00</strong> - Javascript game review<br><strong>11:00 - 12:30</strong> - Introduction to HTML<br><strong>12:30 - 1:30</strong> - Lunch<br><strong>1:30 - 2:30</strong> - Demo of Twine<br><strong>2:30 - 3:00</strong> - Stand-up with the SDK Team<br><strong>3:00 - 3:15</strong> - Break<br><strong>3:15 - 4:45</strong> - HTML (Continuation)<br><strong>4:45 - 5:00</strong> - Recap of the day  </p>
+<h2>Week 5: HTML (Continuation) &amp; Introduction to CSS</h2>
+<p><strong>9:00 - 9:10</strong> - Sign in and catch up with buddy<br><strong>9:10 - 9:30</strong> - Recap<br><strong>9:30 - 12:30</strong> - HTML<br><strong>12:30 - 1:30</strong> - Lunch<br><strong>1:30 - 4:30</strong> - CSS<br><strong>4:30 - 5:00</strong> - Homework assignment &amp; Day recap  </p>
+<h2>Week 6: Work on Personal Website</h2>
+<p><strong>9:00 - 9:15</strong> - Morning Catchup<br><strong>9:15 - 9:30</strong> - Recap<br><strong>9:30 - 12:30</strong> - Continue working on website<br><strong>12:30 - 1:30</strong> - Lunch<br><strong>1:30 - 4:30</strong> - Continue working on website<br><strong>4:30 - 5:00</strong> - Homework assignment &amp; Day recap</p>
+<h2>Week 7: Website Review</h2>
+<p><strong>9.00 - 9.15</strong> - Morning Catchup<br><strong>9.15 - 10.30</strong> - Finish up &amp; Review Homework, Push any changes to Github<br><strong>10.30 - 10.50</strong> - Breakfast<br><strong>10.50 - 11.30</strong> - Independent Review<br><strong>11.30 - 12.30</strong> - Presentation of Review<br><strong>12.30 - 1.30</strong> - Lunch<br><strong>1.30 - 2.50</strong> - Implement action points according to review<br><strong>2.50 - 3.00</strong> - Break<br><strong>3.00 - 4.30</strong> - Continue implementing action points<br><strong>4.30 - 5.00</strong> - Review of the Day  </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="November">
+        <h1>Schedule for November</h1>
+<h2>Week 8: Midterm Break</h2>
+<p>Off for Midterm</p>
+<h2>Week 9: Bootstrap and login pages</h2>
+<p><strong>9.00 - 9.15</strong> - Morning Catchup<br><strong>9.15 - 10.30</strong> - Review and demo of homework<br><strong>10.30 - 12.30</strong> - Attend the Crystal Tech event &amp; tour of Arclabs
+<strong>12.30 - 1.30</strong> - Lunch<br><strong>1.30 - 3.00</strong> - Creation of login &amp; signup pages with Bootstrap<br><strong>3.00 - 3.15</strong> - Break<br><strong>3.15 - 4.45</strong> - Further work on login &amp; signup pages, w/ refactoring of site to include them<br><strong>4.45 - 5.00</strong> - Review of the Day  </p>
+<h2>Week 10: Git</h2>
+<p><strong>9.00 - 10.00</strong> - Morning catchup, review and demo of homework<br><strong>10.00 - 11.00</strong> - Action on any outstanding work<br><strong>11.00 - 11.15</strong> - Break<br><strong>11.15 - 12.30</strong> - Continuation of work for any outstanding work<br><strong>12.30 - 1.30</strong> - Lunch<br><strong>1.30 - 3.00</strong> - Git<br><strong>3.00 - 3.15</strong> - Break<br><strong>3.15 - 4.45</strong> - Git<br><strong>4.45 - 5.00</strong> - Review of the Day    </p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="December">
+        <h1>Schedule for December</h1>
+<h2>Week 11: Website Review</h2>
+<p><strong>9.00 - 9.15</strong> - Morning Catchup<br><strong>9.15 - 10.30</strong> - Finish up &amp; Review Homework<br><strong>10.30 - 10.50</strong> - Breakfast<br><strong>10.50 - 12.30</strong> - Work on Trello Cards/Git Tutorial<br><strong>12.30 - 1.30</strong> - Lunch<br><strong>1.30 - 2.50</strong> - JavaScript<br><strong>2.50 - 3.00</strong> - Break<br><strong>3.00 - 3.30</strong> - Rebase Race<br><strong>3.30 - 4.30</strong> - JavaScript<br><strong>4.30 - 5.00</strong> - Homework assignment &amp; Day recap  </p>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.embed').embed();
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
