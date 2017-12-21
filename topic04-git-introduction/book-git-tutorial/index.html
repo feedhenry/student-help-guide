@@ -183,7 +183,7 @@ body
         <h1>Git guide</h1>
 <p>This manual contains necessary commands for git when working on your own, contributing to other projects and working as a team.</p>
 <h2>What is git about?</h2>
-<p>Git is a version control system that allows you to manage your code easily while working as a team or contributing to other repostiories(repo). It allows you to merge code without having to copy and paste it from another file or files. On Github you can also host your website but it does not give you a proper full domain. </p>
+<p>Git is a version control system that allows you to manage your code easily while working as a team or contributing to other repostories(repo). It allows you to merge code without having to copy and paste it from another file or files. On Github you can also host your website but it does not give you a proper full domain. </p>
 <p>Websites on Github, more info here:<a href="https://pages.github.com">https://pages.github.com</a></p>
 <h2>The basics:</h2>
 <pre><code>Git push
@@ -200,7 +200,7 @@ Git commit -m “first commit”</code></pre>
 <li>Before we use <code>git commit</code> we use <code>git status</code> to see if the file got staged before commiting the file.
 Then we use <code>git commit -m “insert your own message based on the commit”</code> to commit the file, to see if the file got committed we use <code>git log</code> to see if it&#39;s committed. If it succesfully committed.</li>
 </ul>
-<p><img src="https://github.com/feedhenry/student-help-guide-content/tree/master/topic04-git-introduction/book-git-tutorial/img/gitstagescreenshot.png" alt=""> </p>
+<p><img src="./img/gitstagescreenshot.png" alt=""> </p>
 <p>After we committed we use <code>git push</code> to push the file into the repo. </p>
 
       </div>
@@ -214,12 +214,12 @@ Then we use <code>git commit -m “insert your own message based on the commit�
 <p>The main reason using different branches is so that you are not pushing to master. We don&#39;t want to push anything to master directly to not affect it especially if you&#39;re experimenting or doing something big enough that would cause disruption on the master branch. The created branch would be a safe space for someone to experiment in and do major changes without disrupting the main branch.</p>
 <h2>Creating a Branch.</h2>
 <p>Creating a branch is necessary if we want to make a push to the repo that you forked and are working on. Before we create a new branch we need to make sure we’re in the master branch. To switch between branches we use <code>git checkout &lt;your-branch-name&gt;</code>. To create a branch we use the command <code>git checkout -b &lt;name your branch&gt;</code> this should now create a new branch in the forked repo.</p>
-<p><img src="https://github.com/feedhenry/student-help-guide-content/tree/master/topic04-git-introduction/book-git-tutorial/img/checkout.png" alt=""></p>
+<p><img src="./img/checkout.png" alt=""></p>
 <h2>Some Other Commands May Include:</h2>
 <p><code>git branch -d &lt;branch-name&gt;</code></p>
 <p>Deletes the branch that you specify, but won&#39;t let you delete it if you have unmerged changes.</p>
 <p><code>git branch -D &lt;branch-name&gt;</code></p>
-<p>This will delete the branch regarless of whether you have unmerged changes or not.</p>
+<p>This will delete the branch regardless of whether you have unmerged changes or not.</p>
 <p><code>git branch -a</code></p>
 <p>Lists all the remote branches</p>
 <p><code>git branch -m &lt;branch&gt;</code></p>
