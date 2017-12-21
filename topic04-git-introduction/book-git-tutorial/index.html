@@ -180,15 +180,77 @@ body
       </div>
      
       <div  class="ui tab segment lab" data-tab="Basics">
-        
+        <h1>Git guide</h1>
+<p>This manual contains necessary commands for git when working on your own, contributing to other projects and working as a team.</p>
+<h2>What is git about?</h2>
+<p>Git is a version control system that allows you to manage your code easily while working as a team or contributing to other repostories(repo). It allows you to merge code without having to copy and paste it from another file or files. On Github you can also host your website but it does not give you a proper full domain. </p>
+<p>Websites on Github, more info here:<a href="https://pages.github.com">https://pages.github.com</a></p>
+<h2>The basics:</h2>
+<pre><code>Git push
+Git pull
+Git add (filename)
+Git status
+Git commit -m “first commit”</code></pre>
+<ul>
+<li>These commands are used to add files to your repository through a terminal or git bash.</li>
+<li><code>git pull</code>, fetches changes from the remote master and merges changes, it can also be used like this <code>git pull &lt;remote&gt; &lt;branchname&gt;</code> to pull down from a remote master or other branch for example like a forked repo.</li>
+<li>To add files from your machine through a terminal or git bash we first use the command <code>git add &lt;filename&gt;</code>. Git add basically allows the terminal or git bash to grab your file off your machine and allows it to be committed and pushed to a github repo.</li>
+</ul>
+<ul>
+<li>Before we use <code>git commit</code> we use <code>git status</code> to see if the file got staged before commiting the file.
+Then we use <code>git commit -m “insert your own message based on the commit”</code> to commit the file, to see if the file got committed we use <code>git log</code> to see if it&#39;s committed. If it succesfully committed.</li>
+</ul>
+<p><img src="./img/gitstagescreenshot1.png" alt=""> </p>
+<p>After we committed we use <code>git push</code> to push the file into the repo. </p>
+
       </div>
      
       <div  class="ui tab segment lab" data-tab="Branching">
-        
+        <h1>Git Branching</h1>
+<hr>
+<h2>What is Branching?</h2>
+<p>This document is to show how branching works in git and how to use it. Branching is a feature available in git that lets you pull off from the master branch to make changes that won&#39;t directly effect the master branch unless merged. It also means that others have to review your work first just in case you have errors in your work such as spelling or bugs.</p>
+<h2>Why Would You Use Branching?</h2>
+<p>The main reason using different branches is so that you are not pushing to master. We don&#39;t want to push anything to master directly to not affect it especially if you&#39;re experimenting or doing something big enough that would cause disruption on the master branch. The created branch would be a safe space for someone to experiment in and do major changes without disrupting the main branch.</p>
+<h2>Creating a Branch.</h2>
+<p>Creating a branch is necessary if we want to make a push to the repo that you forked and are working on. Before we create a new branch we need to make sure we’re in the master branch. To switch between branches we use <code>git checkout &lt;your-branch-name&gt;</code>. To create a branch we use the command <code>git checkout -b &lt;name your branch&gt;</code> this should now create a new branch in the forked repo.</p>
+<p><img src="./img/checkout.png" alt=""></p>
+<h2>Some Other Commands May Include:</h2>
+<p><code>git branch -d &lt;branch-name&gt;</code></p>
+<p>Deletes the branch that you specify, but won&#39;t let you delete it if you have unmerged changes.</p>
+<p><code>git branch -D &lt;branch-name&gt;</code></p>
+<p>This will delete the branch regardless of whether you have unmerged changes or not.</p>
+<p><code>git branch -a</code></p>
+<p>Lists all the remote branches</p>
+<p><code>git branch -m &lt;branch&gt;</code></p>
+<p>Renames the branch to <code>&lt;branch&gt;</code></p>
+
       </div>
      
       <div  class="ui tab segment lab" data-tab="Rebasing-Without-Conflicts">
-        
+        <h1>Git rebasing</h1>
+<p>Push the changes by typing <code>git push &lt;remote&gt; &lt;branch&gt;</code>, If the branch isn’t out of date, then the changes will push straight up to your github repo, If it is out of date however, you will have to rebase.</p>
+<h2>What is rebasing?</h2>
+<p>If someone commits a change and your branch is behind, &quot;git rebase&quot; will fast forward your branch to include your changes </p>
+<h3>If you do have to rebase, you will be presented with 3 options :</h3>
+<pre><code class="lang-sh">git rebase --continue
+git rebase --skip
+git rebase --abort</code></pre>
+<p><code>git rebase --continue</code> : used when there are no conflicts or the conflicts are solved.  </p>
+<p><code>git rebase --skip</code> : skips the file and won&#39;t be involved in the rebase.  </p>
+<p><code>git rebase --abort</code> : kills the process completely, allowing you to start again.  </p>
+<h2>The process of rebasing</h2>
+<p>Before you start rebasing, you want to make sure that your local branch is up to date with the remote master branch.  You can do this by git pulling any updates from the remote to your local master branch. If nothing happened that means that your branch was already up to date.</p>
+<pre><code class="lang-sh">git checkout master
+git pull origin master</code></pre>
+<p>Once the parent branch is updated, you switch back to the <code>&lt;branch&gt;</code> and start the rebase.</p>
+<pre><code class="lang-sh">git checkout &lt;branch&gt;
+git rebase master</code></pre>
+<p>You will be presented with the 3 options that were mentioned before.  </p>
+<p>If there are no conflicts found, then you will be able to continue the rebase and push your changes.</p>
+<pre><code class="lang-sh">git rebase --continue
+git push &lt;remote&gt; &lt;branch&gt;</code></pre>
+
       </div>
      
       <div  class="ui tab segment lab" data-tab="Rebasing-With-Conflicts">
