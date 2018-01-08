@@ -133,6 +133,10 @@ body
       Rebasing-With-Conflicts
     </a>
     
+    <a class="item" data-tab="Forking">
+      Forking
+    </a>
+    
     <div class="item">
       
     </div>
@@ -255,6 +259,32 @@ git push &lt;remote&gt; &lt;branch&gt;</code></pre>
      
       <div  class="ui tab segment lab" data-tab="Rebasing-With-Conflicts">
         
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Forking">
+        <h1>Forking on GitHub</h1>
+<h2>What is forking?</h2>
+<p>To fork a repository means to get your own version/copy of the repository, and to be able to edit it without affecting the original repo (repository). </p>
+<h2>How to fork</h2>
+<ul>
+<li>Go onto someone’s github profile</li>
+<li>Click on one of their repositories</li>
+<li>Then click the fork button which is usually located below your profile picture dropdown (see image)</li>
+</ul>
+<p><img src="./img/fork.png" alt=""></p>
+<p>Remember: You can’t fork your own repository!</p>
+<h2>Why we fork</h2>
+<p>You may want to fork a repo to develop your own version of an existing project. Or if you are contributing to a project as a team using forks can be a good way to keep the original repository clean. i.e push feature branches to your fork rather than to origin.</p>
+<h2>How to reference a fork</h2>
+<p>As we learned in previous sections you can clone (make a local copy) of any repository. If you have cloned and forked a repository you will want to tell the local copy where it can find the remote fork</p>
+<p>First check which remote copies your local repository is already configured for using <code>git remote -v</code></p>
+<p>The output will look something like this:</p>
+<pre><code>origin    git@github.com:feedhenry/student-help-guide-content.git (fetch)
+origin    git@github.com:feedhenry/student-help-guide-content.git (push)</code></pre>
+<p><code>origin</code> refers to the name given to the repository locally.</p>
+<p>To tell the local repository about an new remote (fork) simply run <code>git remote add &lt;name&gt; &lt;ssh-address&gt;</code></p>
+<p>Note: you can add the https address but as we have already set up ssh access in a previous lab let&#39;s use that.</p>
+
       </div>
      
     </div>
