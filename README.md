@@ -14,10 +14,23 @@ This is the github repo for building the site. To view the site go to http://fee
 
 ## Building
 
-The site is built using the tutors module. A script is prepared to build the site into the docs folder.
+
+### Building Locally
+
+The site is built using the tutors module. A script is prepared to build the site into the content/public-site folder.
 
 Run
  ```
-TODO
+sh build-local.sh
 
 ```
+
+
+### Build to Publish
+
+Run
+```
+sh build.sh
+```
+
+Building to publish builds the site to the docs folder. Once this completes sucessfully the chagnes can be pushed to a pr, and approved and merged will be published.
