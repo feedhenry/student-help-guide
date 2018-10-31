@@ -9,5 +9,7 @@ tutors
 
 echo "copying contents from content/public-site to /docs"
 cp -r public-site/* ../docs/
+rm -rf public-site
+
 
 echo "site built - now ready to commit and push"
