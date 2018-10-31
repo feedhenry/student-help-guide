@@ -16,15 +16,15 @@ This is the github repo for building the site. To view the site go to http://fee
 
 ### Pre-requisite
 
-- Install tutors
+- Install [tutors-ts](https://github.com/edeleastar/tutors-ts)
 
 ```
-npm i -g tutors@1.6.4
+npm i -g tutors-ts
 ```
 
 ### Building
 
-The site is built using the tutors module. A script is prepared to build the site into the content/public-site folder and then copy it to the docs/ folder which is used by github pages. 
+The site is built using the tutors module. A script is prepared to build the site into the content/public-site-uk folder and then copy it to the docs/ folder which is used by github pages. 
 
 Run
 ```
