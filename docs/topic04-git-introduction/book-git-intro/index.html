@@ -1,0 +1,399 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     
+
+     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script>hljs.initHighlightingOnLoad();</script>
+
+     
+
+     <style>
+       
+
+body 
+{
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+}
+
+figcaption
+{
+  margin-bottom: 20px;
+}
+
+.vertical-align
+{
+  display: flex;
+  align-items: center;
+}
+
+
+
+     </style>
+
+   </head>
+
+  <body>
+    
+
+<style>
+  
+
+code
+{
+  font-family: "Monaco";
+  font-size: 110%;
+}
+
+img
+{
+  padding:1px;
+  border:1px solid black;
+}
+
+h1
+{
+  font-style:italic;
+  font-size:130%;
+  border-bottom:thin solid black;
+}
+
+h2
+{
+  font-size:110%;
+  border-bottom: thin solid black;
+}
+
+h3
+{
+  font-size:100%;
+  border-bottom: thin solid black;
+}
+
+body
+{
+  overflow-y: scroll;
+}
+
+.pushable > .pusher
+{
+  padding-bottom: 1.5rem;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
+}
+
+
+
+</style>
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    <a href="../index.html">
+       Git Introduction
+    </a>
+  </header>
+  <div class="right tab-menu menu">
+    
+    <a class="item" data-tab="Git-Labs">
+      Git-Labs
+    </a>
+    
+    <a class="item" data-tab="Terminal">
+      Terminal
+    </a>
+    
+    <a class="item" data-tab="Git-and-github">
+      Git-and-github
+    </a>
+    
+    <a class="item" data-tab="Basic-git-commands">
+      Basic-git-commands
+    </a>
+    
+    <a class="item" data-tab="Push-local-files">
+      Push-local-files
+    </a>
+    
+    <div class="item">
+      
+    </div>
+  </div>
+</div>
+
+<div class="ui segment pushable" >
+
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    
+      
+        <a class="item" href="../../topic01-firstday/book-buddy/index.html">
+          Buddy
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic01-firstday/book-general-rules/index.html">
+          General-Rules
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic02-schedule/book-schedule/index.html">
+          Schedule
+        </a>
+      
+    
+      
+        <a class="active item" href="../../topic04-git-introduction/book-git-intro/index.html">
+          Git-Labs
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic04-git-introduction/book-git-tutorial/index.html">
+          Git-Tutorial
+        </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment" id="labchat">
+      <br>
+      
+      <div  class="ui tab segment lab" data-tab="Git-Labs">
+        <h1>Overview</h1>
+<p>An introduction to using the terminal, Git and Github.</p>
+<h2>Objectives</h2>
+<ol>
+<li>Understand what a terminal is and its basic commands.</li>
+<li>Understand the difference between git and github.</li>
+<li>Learn basic git commands.</li>
+<li>Learn how to push local files to a remote github repository.</li>
+</ol>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Terminal">
+        <h1>Terminal</h1>
+<h2>What is a terminal?</h2>
+<p>The terminal is an interface in which you can type and execute text-based commands.</p>
+<p><img src="img/terminal.png" alt="A terminal view"></p>
+<p>Another way of describing an interface is how something is interacted with. Some examples are: 
+- A steering wheel in a car
+- A controller of a game console
+- A keyboard on a computer
+- A graphical user interface (GUI)</p>
+<p>Can you think of other examples? </p>
+<h2>Alternative names for a terminal</h2>
+<ul>
+<li>Console</li>
+<li>Command Line</li>
+<li>Command Prompt</li>
+<li>Shell</li>
+</ul>
+<h2>How to get access to your terminal</h2>
+<p>This depends on the operating system you are using:
+- On Mac
+  - Use spotlight search to search for &quot;terminal&quot;
+- On Linux
+  - Use the search program to search for &quot;terminal&quot;
+- On Windows
+  - Use the search to search for &quot;cmd&quot;</p>
+<h2>Terminal Commands</h2>
+<h3>Navigating through the terminal</h3>
+<p>You will see <code>&lt;username&gt;@&lt;computer&gt;&lt;foldername&gt;</code>. This tells you what folder you are in.</p>
+<p>To see the contents of the folder you are currently in type <code>ls -al</code> and hit enter. (see the image below for an example).</p>
+<p><img src="img/folder.png" alt="A folder view"></p>
+<p>This will show you a list of all files and folders inside the folder you are currently in.</p>
+<p>To move to a different folder inside the folder you are currently in type <code>cd &lt;folder-name&gt;</code> (See the image below for an example).</p>
+<p><img src="img/sample.png" alt="A folder view"></p>
+<p>Using these you commands you should be able to get to the folder where your My-First-Website files are stored. This is where we want to initialize (create) our local git repository (project).</p>
+<p><strong>NOTE</strong>: If you go into a folder that you want to get out of type <code>cd ..</code> and hit enter. This brings you back up one folder.</p>
+<p>In the terminal <code>.</code> indicates the current folder and <code>..</code> indicates the outer folder.</p>
+<p><strong>NOTE</strong>: You can use tab to complete folder names. E.g type <code>cd sam</code> If you hit tab at this point and there is a folder that matches like the sample folder, the terminal will complete it for you.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Git-and-github">
+        <h1>Git and Github.com</h1>
+<h1>What is Git?</h1>
+<p>Git is a program used to manage source code. Source code are the files and folders that make up your website (i.e. everything inside your My-First-Website folder)</p>
+<p>The image below shows how the local repository (your folder with your website code) and the remote repository (your project on github) relate to each other.</p>
+<p><img src="img/gitgithub.png" alt="Diagram of the Relationship"></p>
+<h1>Creating a repository (project) on Github</h1>
+<p>In order to set up the remote repository (project) on github we created an account on <a href="https://github.com/">Github</a>.</p>
+<p>In order for the website to be hosted we created a New Repository (Project) and named it using the following syntax <code>&lt;username&gt;.github.io</code></p>
+<p>This step is essential for the hosting to work. Once the repository is created on github we can go back to the terminal to get our files into that repository.</p>
+<p>When you create the repository it will give you the option to add a README to the repo. Chose yes at this option.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Basic-git-commands">
+        <h1>Basic Git Commands</h1>
+<ul>
+<li><code>git clone &lt;ssh address&gt;</code><ul>
+<li>This creates a new folder inside the folder you are in using the same name as the remote repository and containing any code stored in the remote repository.  </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>cd into this new folder<ul>
+<li>Open your folder in your text editor and make a change to it. For Example you could change the heading.  </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>git add README.md</code><ul>
+<li>The above command tells git to add the ‘README.md’ file to a ‘staging area’ (don’t worry about what this means right now). This tells git that we will ‘commit’ this file at some point.  </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>git commit -m &#39;first commit&#39;</code><ul>
+<li>The above command tells git to create a ‘commit’ (which bundles any files that we added previously together)  </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>git remote add origin https://github.com/&lt;username&gt;/&lt;reponame&gt;.git</code><ul>
+<li>The above command tells the folder where the remote repository (that we previously created) is.</li>
+<li>What’s important is to use your own username and reponame where it is indicated. So instead of <code>&lt;username&gt;</code> put your actual github username instead. And instead of <code>&lt;reponame&gt;</code> put the name of your repository instead.</li>
+<li><strong>NOTE</strong>: You may also use an ssh address if you have SSH keys set up.  </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>git push -u origin master</code><ul>
+<li>The above command tells git to push any commits we have created to the repository. The first time you do this you will be asked to sign in to github.</li>
+<li>Once this command is complete go to github and see the files in your project. You should see a README.md file there.  </li>
+</ul>
+</li>
+</ul>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="Push-local-files">
+        <h2>Pushing Local Files to a Remote Repository</h2>
+<p>Now that we have set up our folder to be able to push the local files to the remote github project it is now much simpler to push the rest of the files. Follow the below steps to get your other files up there.</p>
+<p><strong>NOTE</strong>: Make sure that you are in your My-First-Website folder and NOT any other folder on your computer when you do these commands</p>
+<ul>
+<li>Type <code>ls</code> and press enter to see what files are in your folder</li>
+<li>Type <code>git add &lt;filename&gt;</code> for each of the files that you want to add i.e. for your index.html file type <code>git add index.html</code></li>
+<li>See your files by typing <code>git status</code><ul>
+<li>Any files in green are ready to be committed. Any files in red have not been added yet. If there are files in red that you want to add run the `git add <filename>1 for those files also.</li>
+<li>Once all the files that you want to add are green then carry on.</li>
+</ul>
+</li>
+<li>To commit the files run <code>git commit -m &#39;adding more files&#39;</code>.<ul>
+<li>The <code>-m</code> indicates the message we want to include with the commit.</li>
+</ul>
+</li>
+<li>Run <code>git status</code>. There should be no more files in green. This means that they are now in the commit.</li>
+<li>Run <code>git push</code><ul>
+<li>This will push the files up to github.</li>
+</ul>
+</li>
+<li>Once you have (at least) an index file in the github repo you can go to your website in your browser.</li>
+<li>The address should be: <code>&lt;github-username&gt;.github.io/index.html</code></li>
+</ul>
+
+      </div>
+     
+    </div>
+
+  </div>
+
+</div>
+<!--  <div class="ui bottom fixed borderless right menu">
+    <div class="ui right tiny menu">
+      <div class="ui mini message segment">
+        .
+        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+            target="_blank">Creative Commons License
+        </a>
+      </div>
+    </div>
+  </div>-->
+
+<script>
+  $(document).on('keydown', function (e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+    <script>
+      $(document).ready(function () {
+  $('img').addClass('ui image');
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function (i) {
+    if (($images[i].alt).length > 0) {
+      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.embed').embed();
+
+  $('.ui.menu .item')
+      .tab({
+        history: true,
+        historyType: 'hash',
+      });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+      .sidebar({ context: $('.pushable') })
+      .sidebar('setting', 'transition', 'slide out')
+      .sidebar('attach events', '#toc');
+});
+
+    </script>
+  </body>
+
+ </html>
