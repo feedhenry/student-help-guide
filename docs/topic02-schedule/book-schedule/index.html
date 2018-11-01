@@ -1,183 +1,144 @@
- <!DOCTYPE html>
- <html>
-   <head>
-
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     
-
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
-     <script>hljs.initHighlightingOnLoad();</script>
-
-     
-
-     <style>
-       
-
-body 
-{
-  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
-}
-
-figcaption
-{
-  margin-bottom: 20px;
-}
-
-.vertical-align
-{
-  display: flex;
-  align-items: center;
-}
-
-
-
-     </style>
-
-   </head>
-
-  <body>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+        type="text/css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css"
+        rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style>
     
 
-<style>
-  
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
 
-code
-{
+p {
+  margin: 0.5em;
+}
+
+pre code {
   font-family: "Monaco";
-  font-size: 110%;
+  font-size: 100%;
 }
 
-img
-{
-  padding:1px;
-  border:1px solid black;
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
 }
 
-h1
-{
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
   font-style:italic;
   font-size:130%;
-  border-bottom:thin solid black;
 }
 
-h2
-{
+h2 {
   font-size:110%;
-  border-bottom: thin solid black;
 }
 
-h3
-{
+h3 {
   font-size:100%;
-  border-bottom: thin solid black;
-}
-
-body
-{
-  overflow-y: scroll;
-}
-
-.pushable > .pusher
-{
-  padding-bottom: 1.5rem;
-}
-
-.ui.segment.pushable
-{
-  margin: 0;
-  padding: 1rem 0;
-  overflow: visible;
 }
 
 
 
-</style>
+  </style>
+</head>
+
+<body>
+
+
 
 <div class="ui fixed top pointing inverted stackable menu labmenu">
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
-    <a href="../index.html">
-       Schedule
-    </a>
+    
+      <a href="../index.html">  Schedule  </a>
+    
   </header>
   <div class="right tab-menu menu">
     
-    <a class="item" data-tab="Schedule">
-      Schedule
-    </a>
+      <a class="item" data-tab="Schedule">
+        Schedule
+      </a>
     
-    <a class="item" data-tab="Week-1">
-      Week-1
-    </a>
+      <a class="item" data-tab="Week-1">
+        Week-1
+      </a>
     
-    <a class="item" data-tab="Week-2">
-      Week-2
-    </a>
+      <a class="item" data-tab="Week-2">
+        Week-2
+      </a>
     
-    <div class="item">
-      
-    </div>
   </div>
 </div>
 
-<div class="ui segment pushable" >
-
+<div class="ui pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
     
       
-        <a class="item" href="../../topic01-firstday/book-buddy/index.html">
-          Buddy
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic01-firstday/book-general-rules/index.html">
-          General-Rules
-        </a>
+        <a class="item"
+           href="/topic01-firstday/book-buddy/index.html">Buddy </a>
       
     
       
-        <a class="active item" href="../../topic02-schedule/book-schedule/index.html">
-          Schedule
-        </a>
+        <a class="item"
+           href="/topic01-firstday/book-general-rules/index.html">General-Rules </a>
       
     
       
-        <a class="item" href="../../topic04-git-introduction/book-git-intro/index.html">
-          Git-Labs
-        </a>
+        <a class="item"
+           href="/topic02-schedule/book-schedule/index.html">Schedule </a>
       
     
       
-        <a class="item" href="../../topic04-git-introduction/book-git-tutorial/index.html">
-          Git-Tutorial
-        </a>
+        <a class="item"
+           href="/topic04-git-introduction/book-git-intro/index.html">Git-Labs </a>
+      
+    
+      
+        <a class="item"
+           href="/topic04-git-introduction/book-git-tutorial/index.html">Git-Tutorial </a>
       
     
   </div>
   <div class="pusher" tabindex="-1">
-    <div class="ui basic segment" id="labchat">
+    <div class="ui basic segment">
       <br>
       
-      <div  class="ui tab segment lab" data-tab="Schedule">
-        <h1>Overview</h1>
+        <div class="ui tab segment lab" data-tab="Schedule">
+          <h1>Overview</h1>
 <p>A weekly schedule of the internship program that is updated every week.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Week-1">
-        <h1>Week 1</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Week-1">
+          <h1>Week 1</h1>
 <h2>Day 1: Monday, Feb 19</h2>
 <p><strong>9.00 - 9.30</strong>: Introduction<br><strong>9.30 - 10.00</strong>: Waterford office standup<br><strong>10.00 - 10.30</strong>: General rules and overview of the program<br><strong>10.30 - 11.00</strong>: Site walk around<br><strong>11.00 - 12.30</strong>: Laptop &amp; account setup<br><strong>12.30 - 13.30</strong>: Lunch<br><strong>13.30 - 14.15</strong>: Introduction to HTML<br><strong>14.15 - 15.30</strong>: Timetable App<br><strong>15.30 - 16.30</strong>: Introduction to Git<br><strong>16.30 - 17.00</strong>: Review of the day</p>
 <h2>Day 2: Tuesday, Feb 20</h2>
@@ -192,10 +153,10 @@ body
 <strong>13.00 - 14.00</strong>: Lunch 
 <strong>14.00 - 15.00</strong>: Help organize for the year review<br><strong>15.00 - 16.00</strong>: Waterford office year review<br><strong>16.00 - 17.00</strong>: Retrospective  </p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Week-2">
-        <h1>Week 2</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Week-2">
+          <h1>Week 2</h1>
 <h2>Day 6: Monday, Feb 26</h2>
 <p><strong>9.00 - 9.30</strong>: Review and continue unfinished tasks<br><strong>9.30 - 10.00</strong>: Waterford office standup<br><strong>10.00 - 12.30</strong>: Programming Fundamentals (Calculator App)<br><strong>12.30 - 13.30</strong>: Lunch<br><strong>13.30 - 15.00</strong>: Programming Fundamentals (Calculator App)<br><strong>15.00 - 15.15</strong>: Break<br><strong>15.15 - 17.00</strong>: Programming Fundamentals (Calculator App)<br><strong>17.00 - 17.30</strong>: Journal  </p>
 <h2>Day 7: Tuesday, Feb 27</h2>
@@ -207,26 +168,14 @@ body
 <h2>Day 10: Friday, Mar 2</h2>
 <p><strong>9.00 - 10.30</strong>: Continue unfinished tasks<br><strong>10.30 - 11.00</strong>: Introduction to AWS<br><strong>11.00 - 12.30</strong>: Continue unfinished tasks<br><strong>12.30 - 13.30</strong>: Lunch<br><strong>13.30 - 16.30</strong>: Continue unfinished tasks<br><strong>16.30 - 17.30</strong>: Powtoon/Presentation Review  </p>
 
-      </div>
-     
+        </div>
+      
     </div>
-
   </div>
-
 </div>
-<!--  <div class="ui bottom fixed borderless right menu">
-    <div class="ui right tiny menu">
-      <div class="ui mini message segment">
-        .
-        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-            target="_blank">Creative Commons License
-        </a>
-      </div>
-    </div>
-  </div>-->
 
 <script>
-  $(document).on('keydown', function (e) {
+  $(document).on('keydown', function(e) {
   e = e || window.event;
   var nextTab;
   switch (e.which || e.keyCode) {
@@ -246,46 +195,39 @@ body
   }
 });
 
-</script>
-
-
-
-    <footer>
-
-    </footer>
-    <script>
-      $(document).ready(function () {
+  $(document).ready(function() {
   $('img').addClass('ui image');
+
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.embed').embed();
-
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
-  </body>
-
- </html>
+</script>
+</body>
+</html>

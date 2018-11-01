@@ -1,189 +1,150 @@
- <!DOCTYPE html>
- <html>
-   <head>
-
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     
-
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
-     <script>hljs.initHighlightingOnLoad();</script>
-
-     
-
-     <style>
-       
-
-body 
-{
-  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
-}
-
-figcaption
-{
-  margin-bottom: 20px;
-}
-
-.vertical-align
-{
-  display: flex;
-  align-items: center;
-}
-
-
-
-     </style>
-
-   </head>
-
-  <body>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+        type="text/css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css"
+        rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style>
     
 
-<style>
-  
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
 
-code
-{
+p {
+  margin: 0.5em;
+}
+
+pre code {
   font-family: "Monaco";
-  font-size: 110%;
+  font-size: 100%;
 }
 
-img
-{
-  padding:1px;
-  border:1px solid black;
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
 }
 
-h1
-{
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
   font-style:italic;
   font-size:130%;
-  border-bottom:thin solid black;
 }
 
-h2
-{
+h2 {
   font-size:110%;
-  border-bottom: thin solid black;
 }
 
-h3
-{
+h3 {
   font-size:100%;
-  border-bottom: thin solid black;
-}
-
-body
-{
-  overflow-y: scroll;
-}
-
-.pushable > .pusher
-{
-  padding-bottom: 1.5rem;
-}
-
-.ui.segment.pushable
-{
-  margin: 0;
-  padding: 1rem 0;
-  overflow: visible;
 }
 
 
 
-</style>
+  </style>
+</head>
+
+<body>
+
+
 
 <div class="ui fixed top pointing inverted stackable menu labmenu">
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
-    <a href="../index.html">
-       Git Introduction
-    </a>
+    
+      <a href="../index.html">  Git Introduction  </a>
+    
   </header>
   <div class="right tab-menu menu">
     
-    <a class="item" data-tab="Git-Tutorial">
-      Git-Tutorial
-    </a>
+      <a class="item" data-tab="Git-Tutorial">
+        Git-Tutorial
+      </a>
     
-    <a class="item" data-tab="Basics">
-      Basics
-    </a>
+      <a class="item" data-tab="Basics">
+        Basics
+      </a>
     
-    <a class="item" data-tab="Branching">
-      Branching
-    </a>
+      <a class="item" data-tab="Branching">
+        Branching
+      </a>
     
-    <a class="item" data-tab="Rebasing-Without-Conflicts">
-      Rebasing-Without-Conflicts
-    </a>
+      <a class="item" data-tab="Rebasing-Without-Conflicts">
+        Rebasing-Without-Conflicts
+      </a>
     
-    <a class="item" data-tab="Rebasing-With-Conflicts">
-      Rebasing-With-Conflicts
-    </a>
+      <a class="item" data-tab="Rebasing-With-Conflicts">
+        Rebasing-With-Conflicts
+      </a>
     
-    <a class="item" data-tab="Forking">
-      Forking
-    </a>
+      <a class="item" data-tab="Forking">
+        Forking
+      </a>
     
-    <div class="item">
-      
-    </div>
   </div>
 </div>
 
-<div class="ui segment pushable" >
-
+<div class="ui pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
     
       
-        <a class="item" href="../../topic01-firstday/book-buddy/index.html">
-          Buddy
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic01-firstday/book-general-rules/index.html">
-          General-Rules
-        </a>
+        <a class="item"
+           href="/topic01-firstday/book-buddy/index.html">Buddy </a>
       
     
       
-        <a class="item" href="../../topic02-schedule/book-schedule/index.html">
-          Schedule
-        </a>
+        <a class="item"
+           href="/topic01-firstday/book-general-rules/index.html">General-Rules </a>
       
     
       
-        <a class="item" href="../../topic04-git-introduction/book-git-intro/index.html">
-          Git-Labs
-        </a>
+        <a class="item"
+           href="/topic02-schedule/book-schedule/index.html">Schedule </a>
       
     
       
-        <a class="active item" href="../../topic04-git-introduction/book-git-tutorial/index.html">
-          Git-Tutorial
-        </a>
+        <a class="item"
+           href="/topic04-git-introduction/book-git-intro/index.html">Git-Labs </a>
+      
+    
+      
+        <a class="item"
+           href="/topic04-git-introduction/book-git-tutorial/index.html">Git-Tutorial </a>
       
     
   </div>
   <div class="pusher" tabindex="-1">
-    <div class="ui basic segment" id="labchat">
+    <div class="ui basic segment">
       <br>
       
-      <div  class="ui tab segment lab" data-tab="Git-Tutorial">
-        <h1>Overview</h1>
+        <div class="ui tab segment lab" data-tab="Git-Tutorial">
+          <h1>Overview</h1>
 <p>An introduction to using Git and Github.</p>
 <h2>Objectives</h2>
 <ol>
@@ -193,10 +154,10 @@ body
 <li>Learn how to resolve conflicts when rebasing.</li>
 </ol>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Basics">
-        <h1>Git guide</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Basics">
+          <h1>Git guide</h1>
 <p>This manual contains necessary commands for git when working on your own, contributing to other projects and working as a team.</p>
 <h2>What is git about?</h2>
 <p>Git is a version control system that allows you to manage your code easily while working as a team or contributing to other repostories(repo). It allows you to merge code without having to copy and paste it from another file or files. On Github you can also host your website but it does not give you a proper full domain. </p>
@@ -219,10 +180,10 @@ Then we use <code>git commit -m â€œinsert your own message based on the commitâ€
 <p><img src="./img/gitstagescreenshot1.png" alt=""> </p>
 <p>After we committed we use <code>git push</code> to push the file into the repo. </p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Branching">
-        <h1>Git Branching</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Branching">
+          <h1>Git Branching</h1>
 <hr>
 <h2>What is Branching?</h2>
 <p>This document is to show how branching works in git and how to use it. Branching is a feature available in git that lets you pull off from the master branch to make changes that won&#39;t directly effect the master branch unless merged. It also means that others have to review your work first just in case you have errors in your work such as spelling or bugs.</p>
@@ -241,10 +202,10 @@ Then we use <code>git commit -m â€œinsert your own message based on the commitâ€
 <p><code>git branch -m &lt;branch&gt;</code></p>
 <p>Renames the branch to <code>&lt;branch&gt;</code></p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Rebasing-Without-Conflicts">
-        <h1>Git rebasing</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Rebasing-Without-Conflicts">
+          <h1>Git rebasing</h1>
 <p>Push the changes by typing <code>git push &lt;remote&gt; &lt;branch&gt;</code>, If the branch isnâ€™t out of date, then the changes will push straight up to your github repo, If it is out of date however, you will have to rebase.</p>
 <h2>What is rebasing?</h2>
 <p>If someone commits a change and your branch is behind, &quot;git rebase&quot; will fast forward your branch to include your changes </p>
@@ -267,14 +228,14 @@ git rebase master</code></pre>
 <pre><code class="lang-sh">git rebase --continue
 git push &lt;remote&gt; &lt;branch&gt;</code></pre>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Rebasing-With-Conflicts">
-        
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Forking">
-        <h1>Forking on GitHub</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Rebasing-With-Conflicts">
+          
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Forking">
+          <h1>Forking on GitHub</h1>
 <h2>What is forking?</h2>
 <p>To fork a repository means to get your own version/copy of the repository, and to be able to edit it without affecting the original repo (repository). </p>
 <h2>How to fork</h2>
@@ -297,26 +258,14 @@ origin    git@github.com:feedhenry/student-help-guide-content.git (push)</code><
 <p>To tell the local repository about an new remote (fork) simply run <code>git remote add &lt;name&gt; &lt;ssh-address&gt;</code></p>
 <p>Note: you can add the https address but as we have already set up ssh access in a previous lab let&#39;s use that.</p>
 
-      </div>
-     
+        </div>
+      
     </div>
-
   </div>
-
 </div>
-<!--  <div class="ui bottom fixed borderless right menu">
-    <div class="ui right tiny menu">
-      <div class="ui mini message segment">
-        .
-        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-            target="_blank">Creative Commons License
-        </a>
-      </div>
-    </div>
-  </div>-->
 
 <script>
-  $(document).on('keydown', function (e) {
+  $(document).on('keydown', function(e) {
   e = e || window.event;
   var nextTab;
   switch (e.which || e.keyCode) {
@@ -336,46 +285,39 @@ origin    git@github.com:feedhenry/student-help-guide-content.git (push)</code><
   }
 });
 
-</script>
-
-
-
-    <footer>
-
-    </footer>
-    <script>
-      $(document).ready(function () {
+  $(document).ready(function() {
   $('img').addClass('ui image');
+
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.embed').embed();
-
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
-  </body>
-
- </html>
+</script>
+</body>
+</html>

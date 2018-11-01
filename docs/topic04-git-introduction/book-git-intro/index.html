@@ -1,185 +1,146 @@
- <!DOCTYPE html>
- <html>
-   <head>
-
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-     
-
-     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
-
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
-     <script>hljs.initHighlightingOnLoad();</script>
-
-     
-
-     <style>
-       
-
-body 
-{
-  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
-}
-
-figcaption
-{
-  margin-bottom: 20px;
-}
-
-.vertical-align
-{
-  display: flex;
-  align-items: center;
-}
-
-
-
-     </style>
-
-   </head>
-
-  <body>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+        type="text/css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css"
+        rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style>
     
 
-<style>
-  
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
 
-code
-{
+p {
+  margin: 0.5em;
+}
+
+pre code {
   font-family: "Monaco";
-  font-size: 110%;
+  font-size: 100%;
 }
 
-img
-{
-  padding:1px;
-  border:1px solid black;
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
 }
 
-h1
-{
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
   font-style:italic;
   font-size:130%;
-  border-bottom:thin solid black;
 }
 
-h2
-{
+h2 {
   font-size:110%;
-  border-bottom: thin solid black;
 }
 
-h3
-{
+h3 {
   font-size:100%;
-  border-bottom: thin solid black;
-}
-
-body
-{
-  overflow-y: scroll;
-}
-
-.pushable > .pusher
-{
-  padding-bottom: 1.5rem;
-}
-
-.ui.segment.pushable
-{
-  margin: 0;
-  padding: 1rem 0;
-  overflow: visible;
 }
 
 
 
-</style>
+  </style>
+</head>
+
+<body>
+
+
 
 <div class="ui fixed top pointing inverted stackable menu labmenu">
   <header class="header item">
     <i id="toc" class="sitemap icon"></i>
-    <a href="../index.html">
-       Git Introduction
-    </a>
+    
+      <a href="../index.html">  Git Introduction  </a>
+    
   </header>
   <div class="right tab-menu menu">
     
-    <a class="item" data-tab="Git-Labs">
-      Git-Labs
-    </a>
+      <a class="item" data-tab="Git-Labs">
+        Git-Labs
+      </a>
     
-    <a class="item" data-tab="Terminal">
-      Terminal
-    </a>
+      <a class="item" data-tab="Terminal">
+        Terminal
+      </a>
     
-    <a class="item" data-tab="Git-and-github">
-      Git-and-github
-    </a>
+      <a class="item" data-tab="Git-and-github">
+        Git-and-github
+      </a>
     
-    <a class="item" data-tab="Basic-git-commands">
-      Basic-git-commands
-    </a>
+      <a class="item" data-tab="Basic-git-commands">
+        Basic-git-commands
+      </a>
     
-    <a class="item" data-tab="Push-local-files">
-      Push-local-files
-    </a>
+      <a class="item" data-tab="Push-local-files">
+        Push-local-files
+      </a>
     
-    <div class="item">
-      
-    </div>
   </div>
 </div>
 
-<div class="ui segment pushable" >
-
+<div class="ui pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
     
       
-        <a class="item" href="../../topic01-firstday/book-buddy/index.html">
-          Buddy
-        </a>
-      
-    
-      
-        <a class="item" href="../../topic01-firstday/book-general-rules/index.html">
-          General-Rules
-        </a>
+        <a class="item"
+           href="/topic01-firstday/book-buddy/index.html">Buddy </a>
       
     
       
-        <a class="item" href="../../topic02-schedule/book-schedule/index.html">
-          Schedule
-        </a>
+        <a class="item"
+           href="/topic01-firstday/book-general-rules/index.html">General-Rules </a>
       
     
       
-        <a class="active item" href="../../topic04-git-introduction/book-git-intro/index.html">
-          Git-Labs
-        </a>
+        <a class="item"
+           href="/topic02-schedule/book-schedule/index.html">Schedule </a>
       
     
       
-        <a class="item" href="../../topic04-git-introduction/book-git-tutorial/index.html">
-          Git-Tutorial
-        </a>
+        <a class="item"
+           href="/topic04-git-introduction/book-git-intro/index.html">Git-Labs </a>
+      
+    
+      
+        <a class="item"
+           href="/topic04-git-introduction/book-git-tutorial/index.html">Git-Tutorial </a>
       
     
   </div>
   <div class="pusher" tabindex="-1">
-    <div class="ui basic segment" id="labchat">
+    <div class="ui basic segment">
       <br>
       
-      <div  class="ui tab segment lab" data-tab="Git-Labs">
-        <h1>Overview</h1>
+        <div class="ui tab segment lab" data-tab="Git-Labs">
+          <h1>Overview</h1>
 <p>An introduction to using the terminal, Git and Github.</p>
 <h2>Objectives</h2>
 <ol>
@@ -189,10 +150,10 @@ body
 <li>Learn how to push local files to a remote github repository.</li>
 </ol>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Terminal">
-        <h1>Terminal</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Terminal">
+          <h1>Terminal</h1>
 <h2>What is a terminal?</h2>
 <p>The terminal is an interface in which you can type and execute text-based commands.</p>
 <p><img src="img/terminal.png" alt="A terminal view"></p>
@@ -230,10 +191,10 @@ body
 <p>In the terminal <code>.</code> indicates the current folder and <code>..</code> indicates the outer folder.</p>
 <p><strong>NOTE</strong>: You can use tab to complete folder names. E.g type <code>cd sam</code> If you hit tab at this point and there is a folder that matches like the sample folder, the terminal will complete it for you.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Git-and-github">
-        <h1>Git and Github.com</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Git-and-github">
+          <h1>Git and Github.com</h1>
 <h1>What is Git?</h1>
 <p>Git is a program used to manage source code. Source code are the files and folders that make up your website (i.e. everything inside your My-First-Website folder)</p>
 <p>The image below shows how the local repository (your folder with your website code) and the remote repository (your project on github) relate to each other.</p>
@@ -244,10 +205,10 @@ body
 <p>This step is essential for the hosting to work. Once the repository is created on github we can go back to the terminal to get our files into that repository.</p>
 <p>When you create the repository it will give you the option to add a README to the repo. Chose yes at this option.</p>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Basic-git-commands">
-        <h1>Basic Git Commands</h1>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Basic-git-commands">
+          <h1>Basic Git Commands</h1>
 <ul>
 <li><code>git clone &lt;ssh address&gt;</code><ul>
 <li>This creates a new folder inside the folder you are in using the same name as the remote repository and containing any code stored in the remote repository.  </li>
@@ -288,10 +249,10 @@ body
 </li>
 </ul>
 
-      </div>
-     
-      <div  class="ui tab segment lab" data-tab="Push-local-files">
-        <h2>Pushing Local Files to a Remote Repository</h2>
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Push-local-files">
+          <h2>Pushing Local Files to a Remote Repository</h2>
 <p>Now that we have set up our folder to be able to push the local files to the remote github project it is now much simpler to push the rest of the files. Follow the below steps to get your other files up there.</p>
 <p><strong>NOTE</strong>: Make sure that you are in your My-First-Website folder and NOT any other folder on your computer when you do these commands</p>
 <ul>
@@ -315,26 +276,14 @@ body
 <li>The address should be: <code>&lt;github-username&gt;.github.io/index.html</code></li>
 </ul>
 
-      </div>
-     
+        </div>
+      
     </div>
-
   </div>
-
 </div>
-<!--  <div class="ui bottom fixed borderless right menu">
-    <div class="ui right tiny menu">
-      <div class="ui mini message segment">
-        .
-        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-            target="_blank">Creative Commons License
-        </a>
-      </div>
-    </div>
-  </div>-->
 
 <script>
-  $(document).on('keydown', function (e) {
+  $(document).on('keydown', function(e) {
   e = e || window.event;
   var nextTab;
   switch (e.which || e.keyCode) {
@@ -354,46 +303,39 @@ body
   }
 });
 
-</script>
-
-
-
-    <footer>
-
-    </footer>
-    <script>
-      $(document).ready(function () {
+  $(document).ready(function() {
   $('img').addClass('ui image');
+
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.embed').embed();
-
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
-    </script>
-  </body>
-
- </html>
+</script>
+</body>
+</html>
