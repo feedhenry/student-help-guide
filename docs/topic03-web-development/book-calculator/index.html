@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"
+        type="text/css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css"
+        rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
+  <script type="text/javascript"
+          src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/kotlin.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <style>
+    
+
+body {
+  font-family: "Open Sans", "Helvetica", "Helvetica Neue",  "Arial", sans-serif;
+  font-size:90%;
+  color: black;
+}
+
+p {
+  margin: 0.5em;
+}
+
+pre code {
+  font-family: "Monaco";
+  font-size: 100%;
+}
+
+img {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin:10px;
+}
+
+h1, h2, h3 {
+  border-bottom:thin solid black;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h1 {
+  font-style:italic;
+  font-size:130%;
+}
+
+h2 {
+  font-size:110%;
+}
+
+h3 {
+  font-size:100%;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+
+
+<div class="ui fixed top pointing inverted stackable menu labmenu">
+  <header class="header item">
+    <i id="toc" class="sitemap icon"></i>
+    
+      <a href="../index.html">  Web Development Introduction  </a>
+    
+  </header>
+  <div class="right tab-menu menu">
+    
+      <a class="item" data-tab="Calculator">
+        Calculator
+      </a>
+    
+      <a class="item" data-tab="UI-Implementation">
+        UI-Implementation
+      </a>
+    
+      <a class="item" data-tab="Onclick-Events">
+        Onclick-Events
+      </a>
+    
+      <a class="item" data-tab="Creating-Equations">
+        Creating-Equations
+      </a>
+    
+      <a class="item" data-tab="Clear">
+        Clear
+      </a>
+    
+  </div>
+</div>
+
+<div class="ui pushable">
+  <div class="ui inverted labeled icon left inline vertical sidebar menu">
+    <br><br>
+    
+      
+        <a class="item"
+           href="http://feedhenry.org/student-help-guide//topic01-firstday/book-buddy/index.html">Buddy </a>
+      
+    
+      
+        <a class="item"
+           href="http://feedhenry.org/student-help-guide//topic01-firstday/book-general-rules/index.html">General-Rules </a>
+      
+    
+      
+        <a class="item"
+           href="http://feedhenry.org/student-help-guide//topic02-schedule/book-schedule/index.html">Schedule </a>
+      
+    
+      
+        <a class="item"
+           href="http://feedhenry.org/student-help-guide//topic03-web-development/book-calculator/index.html">Calculator </a>
+      
+    
+      
+        <a class="item"
+           href="http://feedhenry.org/student-help-guide//topic04-git-introduction/book-git-intro/index.html">Git-Labs </a>
+      
+    
+      
+        <a class="item"
+           href="http://feedhenry.org/student-help-guide//topic04-git-introduction/book-git-tutorial/index.html">Git-Tutorial </a>
+      
+    
+  </div>
+  <div class="pusher" tabindex="-1">
+    <div class="ui basic segment">
+      <br>
+      
+        <div class="ui tab segment lab" data-tab="Calculator">
+          <h1>Build a Calculator</h1>
+<p>Build a calculator using HTML, CSS and JavaScript!</p>
+<h1>Designing the Calculator</h1>
+<p>Before we start creating our calculator, we should create a wireframe for our calculator first. </p>
+<p>A wireframe is a layout of your application that shows what you&#39;re application would look like and is a critical step in designing any application.
+This helps us determine and visualize what the application is supposed to look like and how it is supposed to function.</p>
+<p><strong>What should a calculator look like? What should it be able to do?</strong></p>
+<p>The calculator wireframe below shows us where the buttons and input/display should be within our calculator and their functions.</p>
+<p><img src="img/wireframe.png" alt="Calculator wireframe"></p>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.experienceux.co.uk/faqs/what-is-wireframing/">What is Wireframing</a></li>
+<li><a href="https://medium.com/mockplus/10-dos-and-don-ts-of-wireframing-8a6d0b3429d8">Do&#39;s and Dont&#39;s of Wireframing</a></li>
+</ul>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="UI-Implementation">
+          <h1>Creating the Calculator Layout with HTML &amp; CSS</h1>
+<p>We can divide our calculator into columns and rows as shown in the diagram below.</p>
+<p><img src="img/calculatorLayout.png" alt="Calculator Layout"></p>
+<h1>Task 1: Create the calculator layout using the Table element</h1>
+<p>An HTML <strong>table</strong> element can be defined using the <code>&lt;table&gt;</code> tag.</p>
+<p>Within the <strong>table</strong> element, we can define our table rows <code>&lt;tr&gt;</code> and table cells <code>&lt;td&gt;</code>.</p>
+<p>Follow the diagram above to create the calculator layout using an HTML table element.</p>
+<p><strong>Task Checklist</strong></p>
+<ul>
+<li>An empty table with the correct rows and columns as shown in the calculator wireframe should be created.</li>
+</ul>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/html/html_tables.asp">W3School: HTML Tables</a></li>
+</ul>
+<h1>Task 2: Create the calculator&#39;s display screen</h1>
+<p>The table cell element <code>&lt;td&gt;</code> has an attribute called <strong>colspan</strong>. </p>
+<p>Attributes are extra bits of information which you can add to an HTML element to define its characteristics. They are defined in the element&#39;s opening tag and are made up of two parts - <strong>name</strong> and <strong>value</strong>. </p>
+<p><strong>For example:</strong></p>
+<pre><code>&lt;div id=&quot;container&quot;&gt;&lt;/div&gt;</code></pre>
+<ul>
+<li><strong>Name</strong>: property you want to set. In the example above, this is <code>id</code>.</li>
+<li><strong>Value</strong>: the value of the property you want to set. In the example above, this is <code>&quot;container&quot;</code>.</li>
+</ul>
+<p>Create the layout of the display screen by using the <code>&lt;td&gt;</code> element and configure it&#39;s <strong>colspan</strong> attribute. This attribute defines the number of columns a cell should span.</p>
+<p>To create the display screen, we can use the <code>&lt;input&gt;</code> element.</p>
+<p>A user should not be able to change this input&#39;s value. <strong>What attribute can we use in order to do this?</strong></p>
+<p><strong>Task Checklist</strong></p>
+<ul>
+<li>An input screen with the correct width as shown in the wireframe should be created.</li>
+</ul>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/html/html_attributes.asp">W3School: Attributes</a></li>
+<li><a href="https://www.w3schools.com/tags/tag_input.asp">W3School: Input</a></li>
+<li><a href="https://www.w3schools.com/tags/tag_td.asp">W3School: <td> Tag</a></li>
+</ul>
+<h1>Task 3: Create the calculator buttons</h1>
+<p>Buttons can be created using the <code>&lt;button&gt;</code> element.</p>
+<p>Add the calculator buttons to your table, following the layout of your wireframe.</p>
+<p><strong>Task Checklist</strong></p>
+<ul>
+<li>Buttons with the correct values should be placed within the table as shown in the calculator wireframe.</li>
+</ul>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/tags/tag_button.asp">W3School: Buttons</a></li>
+</ul>
+<h1>GIT Checkpoint!</h1>
+<p><img src="img/gitCheckpoint1.png" alt=""></p>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Onclick-Events">
+          <h1>Implement Calculator Functionality</h1>
+<p>What should the calculator be able to do?</p>
+<ul>
+<li>A user should be able to click a number button and show its value on the display screen.</li>
+<li>A user should be able to click the number and operator buttons to form an equation.</li>
+<li>A user should be able to see the answer of the equation entered on the display screen when the <code>=</code> button is clicked.</li>
+<li>A user should be able to reset the calculator by clicking the DEL button.</li>
+</ul>
+<h1>The onclick event</h1>
+<p>The <strong>onclick</strong> event attribute can be attached to an HTML <strong>button</strong> element. This allows a script to be executed when the button is clicked.</p>
+<pre><code>&lt;button onclick=&quot;buttonClicked()&quot;&gt; 1 &lt;/button&gt;</code></pre>
+<ul>
+<li>When this button is clicked, it will execute the function <strong>buttonClicked()</strong> defined in your JavaScript file.</li>
+</ul>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/jsref/event_onclick.asp">W3School: onclick Event</a></li>
+<li><a href="https://www.w3schools.com/js/js_functions.asp">W3School: JavaScript Functions</a></li>
+</ul>
+<h1>Manipulate the display screen</h1>
+<p>In order to access an HTML element in JavaScript, we need to use the HTML Document Object Model (DOM). The document object has properties and methods that we can use in order to manipulate an element within our HTML file.</p>
+<p>The display screen, should have an identifier so that we can manipulate it without manipulating other elements. In order to get this element, we can use the <strong>getElementById()</strong> method of the document object. </p>
+<pre><code>var displayScreen = document.getElementById(&#39;displayScreen&#39;);</code></pre>
+<p><strong>NOTE:</strong> There are multiple ways of getting an HTML object. It can be retrieved by name, tag, or class.</p>
+<p>In order to change the value shown in our display screen, we can change the content of the input field&#39;s <code>value</code> attribute by assigning a new value to it.</p>
+<pre><code>displayScreen.value = &quot;123&quot;;</code></pre>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/js/js_htmldom.asp">W3School: DOM</a></li>
+<li><a href="https://www.w3schools.com/jsref/dom_obj_document.asp">W3School: Document Object</a></li>
+<li><a href="https://www.w3schools.com/jsref/met_document_getelementbyid.asp">W3School: getElementById()</a></li>
+</ul>
+<h1>Task 1: Display the number clicked on the display screen</h1>
+<p><strong>What should happen when a number button is clicked?</strong></p>
+<p>When a number button is clicked, it should display the number on the display screen. Each time a button is clicked, the number should be added to the end of the number, if there&#39;s already a number displayed on the input screen.</p>
+<p>We need to create a function, <code>addNumberToDisplay()</code> which adds our number to the display screen.</p>
+<pre><code>&lt;button onclick=&quot;addNumberToDisplay(&#39;7&#39;)&quot;&gt; 7 &lt;/button&gt;</code></pre>
+<p>This function should accept a parameter which states the value of the number clicked. Notice the string value within the brackets <code>(&#39;7&#39;)</code>. This passes a string parameter with the value <code>&#39;7&#39;</code> to the function called.</p>
+<p>When we define our function, it should allow this parameter to be passed so we can use it within our function.</p>
+<pre><code>function addNumberToDisplay(number) {
+  // Function Implementation...
+}</code></pre>
+<p>We can then use this parameter to display the clicked number in our display screen.</p>
+<pre><code>  displayScreen.value = number;</code></pre>
+<p>Now, everytime we click a number button, it should display this number on the display screen.</p>
+<p><strong>Task Checklist</strong></p>
+<ul>
+<li>Create a function which displays the number on the display screen.</li>
+<li>Attach this function to you rnumber buttons as an <code>onclick</code> event.</li>
+</ul>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/js/js_functions.asp">W3School: Functions</a></li>
+</ul>
+<h1>Task 2: Displaying multiple digits</h1>
+<p>The code above only displays single digits at a time. <strong>But what if we want to have more than a single digit in our display screen</strong></p>
+<p>In order to do this, we need to concatenate to the end of the current value of the display screen. We can use the <code>+</code> operator to concatenate two strings.</p>
+<pre><code>var helloWorld = &quot;Hello &quot; + &quot;World!&quot;; //=&gt; &quot;Hello World!&quot;</code></pre>
+<p>Let&#39;s change our code in our <code>addNumberToInput() function</code>
+First, we need to get the current value of our input screen. </p>
+<pre><code>var displayScreenValue = displayScreen.value;</code></pre>
+<p>Then we can concatenate our number pressed at the end of of our current input. We can then assign it back to the display screen value.</p>
+<pre><code>displayScreen.value = displayScreenValue + number;</code></pre>
+<p><strong>Refactor Challenge!</strong>
+How can we refactor the code above so that it can all be in one line?</p>
+<p><strong>Task Checklist</strong></p>
+<ul>
+<li>Function refactored so that we can display multiple digits on the display screen.</li>
+</ul>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/js/js_strings.asp">W3School: Strings</a></li>
+<li><a href="https://www.w3schools.com/js/js_operators.asp">W3School: JavaScript Operators</a></li>
+</ul>
+<h1>GIT Checkpoint!</h1>
+<p><img src="img/gitCheckpoint2.png" alt=""></p>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Creating-Equations">
+          <h1>Creating our Equation</h1>
+<p>Two of our use cases states that we should be able to create and evaluate an equation using the number and operator buttons in our calculator.</p>
+<pre><code>- A user should be able to click the number and operator buttons to form an equation.
+- A user should be able to see the answer of the equation entered on the display screen when the `=` button is clicked.</code></pre>
+<h1>Task 1: Building the Equation</h1>
+<p><strong>What happens when one of the operators (<code>+</code>, <code>-</code>, <code>/</code>, <code>*</code>) is clicked?</strong></p>
+<p>When one of the operators is clicked, the number displayed on the screen and the operator should be added to our string equation. The operator should also be displayed in the display screen as the last character in the display screen value.</p>
+<p><strong>Add an onclick event to our operator buttons</strong></p>
+<p>Add the onclick event to the operator buttons and ensure that it passes the value of each button clicked so we can use this within our function.</p>
+<p><strong>Create a function that gets called when the user clicks an operator button</strong></p>
+<p>Define a function in your JavaScript file which does the following:
+- Accept a parameter which holds the value the clicked operator button.
+- Concatenates the operator to the display screen value.</p>
+<p>This function should then be attached as an <code>onclick</code> event to each of our operator buttons.</p>
+<p><strong>Task Checklist</strong></p>
+<ul>
+<li>Function created which gets called when a user clicks an operator button</li>
+<li>Onclick events attached to each of the operator buttons which adds the operator to our equation.</li>
+</ul>
+<h1>Task 2: Evaluating our Equation</h1>
+<p><strong>What should happen when the <code>=</code> button is pressed?</strong></p>
+<p>When the <code>=</code> button is pressed, we need to display the answer of the equation displayed in the display screen.</p>
+<p>In order to evaluate the string equation, we can use the <strong>eval()</strong> function. </p>
+<p><strong>Remember, you can access the display screen value by using the DOM object</strong></p>
+<p>Display the answer of the equation in the display screen.</p>
+<p><strong>Task Checklist</strong></p>
+<ul>
+<li>When the <code>=</code> button is clicked, the equation should be evaluated and the answer shown on the display screen.</li>
+</ul>
+<p><strong><em>Further Reading:</em></strong></p>
+<ul>
+<li><a href="https://www.w3schools.com/jsref/jsref_eval.asp">W3School: Eval()</a></li>
+</ul>
+<h1>Git Checkpoint!</h1>
+<p><img src="img/gitCheckpoint3.png" alt=""></p>
+
+        </div>
+      
+        <div class="ui tab segment lab" data-tab="Clear">
+          <h1>Clearing the Display Screen</h1>
+<p>A user should be able to clear the display screen when they press the <code>Del</code> button.</p>
+<h1>Task 1: Clear the display screen</h1>
+<p>In order to clear the display screen, we can simply set the value to an empty string.</p>
+<pre><code>displayScreen.value = &quot;&quot;;</code></pre>
+<h1>Test it!</h1>
+<p>Testing is a very important part of the process when you build an application. Make sure to test and see if your changes are working.</p>
+<h1>Bugs Bugs Bugs!</h1>
+<p>Test your calculator from end to end to see if there&#39;s any bugs. Can you find any? Brownie points for finding one and fixing it! Don&#39;t be afraid to phone a friend (just grab one of us or anyone passing nearby) :)</p>
+<h1>Make it Look Nice</h1>
+<p>Some tips: 
+- <code>px</code> is not the only css size unit available. % and em are also useful!
+- If you&#39;re stuck on colour schemes, find an online colour theme generator (e.g. <a href="https://coolors.co/app">https://coolors.co/app</a>)
+- You can group elements in css so that the style will be implemented to all of the elements declared. For example:</p>
+<pre><code>div, p { 
+  color: black;
+}</code></pre>
+<ul>
+<li>The defined style will both be applied ot the <code>&lt;div&gt;</code> and <code>&lt;p&gt;</code> elements in the HTML file.</li>
+</ul>
+<p><strong><em>Further Reading:</em></strong>
+- <a href="https://www.w3schools.com/cssref/css_units.asp">W3School: CSS Units</a></p>
+<h1>Add More Functionality</h1>
+<p>What other functionalities can a calculator have? </p>
+<h1>Git Checkpoint!</h1>
+<p><img src="img/gitCheckpoint4.png" alt=""></p>
+
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).on('keydown', function(e) {
+  e = e || window.event;
+  var nextTab;
+  switch (e.which || e.keyCode) {
+    case 37: // left
+      nextTab = $('.tab-menu a[data-tab].active').prev('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').last();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+
+    case 39: // right
+      nextTab = $('.tab-menu a[data-tab].active').next('a[data-tab]');
+      if (!nextTab.length) nextTab = $('.tab-menu a[data-tab]').first();
+      nextTab.click();
+      $('.pusher').focus();
+      break;
+  }
+});
+
+  $(document).ready(function() {
+  $('img').addClass('ui image');
+
+  $('.ui.embed').embed();
+
+  const $images = $('.lab img');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
+      $($images[i]).wrap(divImg);
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
+      divLabel.append($images[i].alt);
+      $(divLabel).insertBefore($images[i]);
+    }
+  });
+
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
+
+  $('.popup').popup();
+
+  $('.ui.sidebar')
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
+});
+
+</script>
+</body>
+</html>
