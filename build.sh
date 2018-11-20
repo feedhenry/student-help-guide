@@ -1,6 +1,5 @@
 #!/bin/bash
 
-echo "installing tutors package"
 cd content/
 
 echo "building site"
